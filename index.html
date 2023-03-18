@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy birthday!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <h1>С днюхой, старик :)</h1>
+        <img id="cat" src="https://emojis.slackmojis.com/emojis/images/1597320283/10003/catjam.gif">
+    </div>
+    <canvas id="birthday"></canvas>
+    <audio id="audio" src="music.mp3" preload="auto" loop></audio>
+
+    <script>
+        alert('Жми кота, он тут диджей, а ещё он кнопка play...');
+
+        const audio = document.querySelector('#audio');
+        audio.volume = .25;
+        let play = false;
+
+        document.querySelector('#cat').addEventListener('click', AudioPlay);
+
+        function AudioPlay() {
+            if (play === false) {
+                play = true;
+                audio.play();
+            }
+            else {
+                play = false;
+                audio.pause();
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
